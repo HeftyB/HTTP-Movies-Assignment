@@ -2,24 +2,11 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams, useHistory } from "react-router-dom";
 import MovieCard from "./MovieCard";
-import { Link } from "react-router-dom";
 
 function Movie({ addToSavedList, getMovieList }) {
   const [movie, setMovie] = useState(null);
   const { push } = useHistory();
   const params = useParams();
-
-  // const updateMovie = id => {
-  //   axios.get(`http://localhost:5000/update-movie/${id}`)
-  //     .then( item => {
-  //       console.log(item);
-  //     })
-  //     .catch( error => {
-  //       console.log(error)
-  //       debugger
-  //     })
-  //     push(`/update-movie/${id}`)
-  // }
 
   const fetchMovie = (id) => {
     axios

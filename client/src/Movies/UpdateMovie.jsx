@@ -2,7 +2,6 @@ import React , { useEffect, useState }from 'react'
 import { useParams, useHistory } from "react-router-dom";
 import useForm from "./useForm";
 import axios from "axios";
-import { fetchMovie } from "./Movie";
 
 const initialValue = {
     id: null,
@@ -15,7 +14,6 @@ const initialValue = {
 export default function UpdateMovie ({setMovieList, getMovieList}) {
     const [movie, setMovie] = useState(null);
     const { push } = useHistory();
-    const { id } = useParams();
     const params = useParams();
     const [values, setValues, setFormValues] = useForm(initialValue);
 
