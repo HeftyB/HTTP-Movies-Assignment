@@ -75,3 +75,8 @@ body {
   color: red;
   text-align: center;
 }
+
+.updates {
+  display: flex;
+  justify-content: center;
+}
